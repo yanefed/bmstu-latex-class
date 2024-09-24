@@ -267,3 +267,36 @@
 
 	\setcounter{page}{2}
 }
+
+
+\newcommand{\titlepageaareport}[4]
+{
+	\textbf{ОТЧЕТ} \\
+	по #1 \\
+	\ifthenelse{\isempty{#2}}{}{по курсу <<#2>> \\}
+	\ifthenelse{\isempty{#3}}{}{на тему: <<#3>> \\}
+	\ifthenelse{\isempty{#4}}{}{Вариант <<#4>> \\}
+}
+
+\newcommand{\makeaareporttitle}[8]
+{
+	\documentmeta{Отчет}{#7}{по #3 по курсу #4}{#5}
+
+	\begin{titlepage}
+	\centering
+
+	\titlepageheader{#1}{#2}
+	\vspace{15.8mm}
+
+	\titlepageaareport{#3}{#4}{#5}{#6}
+	\vfill
+
+	\titlepageauthors{#7}{Преподаватель}{#8}{}{}
+	\vspace{14mm}
+
+	\textit{Москва --- {\the\year} г.}
+	\end{titlepage}
+
+	\setcounter{page}{2}
+}
+
