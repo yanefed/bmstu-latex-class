@@ -17,7 +17,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 
-\ProvidesClass{bmstu}[2023/01/28 v2.0.0 BMSTU class]
+\ProvidesClass{bmstu}[2024/10/28 v1.0.0 BMSTU class]
 
 % Установка базового класса
 \LoadClass[a4paper,oneside,14pt]{extreport}
@@ -30,10 +30,10 @@
 
 % Настройка полей
 \RequirePackage[
-	left=30mm,
-	right=10mm, % Является требованием МГТУ, не соответствует ГОСТ 7.32-2017
-	top=20mm,
-	bottom=20mm,
+    left=30mm,
+    right=10mm, % Является требованием МГТУ, не соответствует ГОСТ 7.32-2017
+    top=20mm,
+    bottom=20mm,
 ]{geometry}
 
 % Настройка переносов
@@ -77,9 +77,9 @@
 
 % Настройка подписей
 \RequirePackage[
-	labelsep=endash,
-	figurename=Рисунок,
-	singlelinecheck=false,
+    labelsep=endash,
+    figurename=Рисунок,
+    singlelinecheck=false,
 ]{caption}
 \captionsetup[figure]{justification=centering}
 
@@ -93,10 +93,10 @@
 
 % Настройка библиографии
 \RequirePackage[
-	style=gost-numeric,
-	language=auto,
-	autolang=other,
-	sorting=none,
+    style=gost-numeric,
+    language=auto,
+    autolang=other,
+    sorting=none,
 ]{biblatex}
 \RequirePackage{csquotes}
 \DeclareFieldFormat{urldate}{(дата обращения:\addspace\thefield{urlday}\adddot \thefield{urlmonth}\adddot\thefield{urlyear})}
@@ -113,3 +113,6 @@
 \RequirePackage{bmstu-defabbr}
 \RequirePackage{bmstu-biblio}
 \RequirePackage{bmstu-appendix}
+
+\RequirePackage{graphicx}
+\renewcommand\labelitemi{-} % Маркерные списки по госту
