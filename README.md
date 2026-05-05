@@ -25,22 +25,8 @@ LaTeX-класс `bmstu` призван упростить создание от
 
 Перед установкой класса убедитесь, что установлен один из дистрибутивов LaTeX.
 
-### Автоматическая
-
-Так как пакет размещен в CTAN, можно выполнить автоматическую установку.
-
-Например, для Ubuntu с дистрибутивом TeX Live:
 ```bash
-sudo tlmgr install bmstu
-```
-
-### Ручная
-
-Если по какой-то причине автоматическая установка невозможна, необходимо установить класс вручную. Для этого следует добавить пакет в texmf-дерево пользователя.
-
-Например, для Ubuntu с дистрибутивом TeX Live:
-```bash
-git clone https://github.com/Orianti/bmstu-latex-class.git
+git clone https://github.com/yanefed/bmstu-latex-class.git
 cd bmstu-latex-class/
 mkdir -p $(kpsewhich -var-value TEXMFHOME)/tex/latex/ && cp -R bmstu $_
 ```
@@ -48,8 +34,6 @@ mkdir -p $(kpsewhich -var-value TEXMFHOME)/tex/latex/ && cp -R bmstu $_
 ## Использование
 
 Для локальной разработки следует использовать компилятор PdfLaTeX и biber в качестве инструмента сборки библиографии. Использование bibtex вместо biber может привести к некорректному отображению ссылок.
-
-Также пакет доступен в онлайн-редакторе [Overleaf](https://www.overleaf.com).
 
 ## Вклад в разработку
 
